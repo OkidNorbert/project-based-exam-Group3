@@ -8,6 +8,8 @@ import type {
   User,
   GenrePreference,
   WatchlistItem,
+  MovieMood,
+  RecommendationDashboard,
 } from "@/types/movie";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
@@ -141,7 +143,7 @@ export const moviesAPI = {
   topRated: (page = 1) =>
     apiFetch<PaginatedResponse<MovieCompact>>(`/movies/top-rated/?page=${page}`),
 
-  getDetail: (tmdbId: number) => apiFetch<any>(`/movies/tmdb/${tmdbId}/`),
+  getDetail: (tmdbId: number) => apiFetch<MovieDetail>(`/movies/tmdb/${tmdbId}/`),
 
   getRecommendations: (movieId: number) =>
     apiFetch<MovieCompact[]>(`/movies/list/${movieId}/recommendations/`),
@@ -152,10 +154,12 @@ export const moviesAPI = {
   getWikipedia: (movieId: number) =>
     apiFetch<{ summary: string; url: string }>(`/movies/list/${movieId}/wikipedia/`),
 
-  getMoods: () => apiFetch<any[]>("/movies/moods/"),
+  getMoods: () => apiFetch<MovieMood[]>("/movies/moods/"),
 
   getMoodMovies: (slug: string, page = 1) =>
-    apiFetch<any>(`/movies/moods/${slug}/?page=${page}`),
+    apiFetch<PaginatedResponse<MovieCompact> & { mood: MovieMood }>(
+      `/movies/moods/${slug}/?page=${page}`
+    ),
 
   discover: (params: Record<string, string | number>) => {
     const qs = new URLSearchParams();
@@ -235,5 +239,5 @@ export const recommendationsAPI = {
   removeFromWatchlist: (id: number) =>
     apiFetch(`/recommendations/watchlist/${id}/`, { method: "DELETE" }),
 
-  getDashboard: () => apiFetch<any>("/recommendations/dashboard/"),
+  getDashboard: () => apiFetch<RecommendationDashboard>("/recommendations/dashboard/"),
 };

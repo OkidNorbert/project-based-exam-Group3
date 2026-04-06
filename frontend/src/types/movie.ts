@@ -104,4 +104,30 @@ export interface GenrePreference {
   interaction_count: number;
 }
 
+export interface WatchlistItem {
+  id: number;
+  tmdb_id: number;
+  movie_title: string;
+  poster_url: string;
+  interaction_type: "watchlist" | "favorite" | "liked";
+  is_watched: boolean;
+  added_at: string;
+}
+
+export interface MovieMood {
+  slug: string;
+  label: string;
+  description: string;
+}
+
+export interface RecommendationDashboard {
+  recommendations: MovieCompact[];
+  watchlist_count: number;
+  top_genres: GenrePreference[];
+  stats: {
+    total_watched: number;
+    hours_of_content: number;
+  };
+}
+
 

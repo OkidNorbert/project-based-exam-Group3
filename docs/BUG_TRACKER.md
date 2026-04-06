@@ -12,7 +12,7 @@ This document tracks every bug identified during the **CineQuest Project** Resto
 | **BUG-004** | Backend (Sync Commands) | Local database contains zero entries; frontend is empty. | Backend Restoration | *Needs Action* (Run `sync_movies` after setting `.env`) | *PLANNED* ⏳ | Essential for homepage, search, and trailer functionality. |
 | **BUG-005** | Backend (`views.py`) | `search` and `trending` endpoints are incorrectly set to `POST` methods. | Backend Restoration | Changed decorators from `["POST"]` to `["GET"]` | **FIXED** ✅ | Corrected standard data-fetching access for frontend. |
 | **BUG-006** | Frontend (`page.tsx`) | `trending` state consumes a Paginated Object instead of a Movie Array. | Frontend Reconstruction | Correctly mapped the `results` array in `page.tsx` | **FIXED** ✅ | Prevents "undefined" failures when components try to slice the data. |
-| **BUG-007** | Frontend (Types) | Missing strict TypeScript interfaces for Movie data and API Responses. | Frontend Reconstruction | *Needs Action* (Add to `/types/movie.ts`) | *PLANNED* ⏳ | Improves code quality, editor support, and prevents silent UI failures. |
+| **BUG-007** | Frontend (Types) | Missing strict TypeScript interfaces for Movie data and API Responses. | Frontend Reconstruction | Added `WatchlistItem`, `MovieMood`, and `RecommendationDashboard` interfaces. | **FIXED** ✅ | Improved code quality and documentation consistency. |
 
 ---
 
