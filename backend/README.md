@@ -14,9 +14,15 @@ Before starting, ensure you have the following installed on your machine:
 
 ---
 
-## 🚀 Local Setup & Installation
+## 🚀 Local Setup & Installation (First Attempt)
 
-1. **Create a Virtual Environment**
+1. **Check out your Feature Branch**  
+   Never work on `main`. Find your branch in `PROJECT_GUIDE.md`.
+   ```bash
+   git checkout <your-assigned-branch>
+   ```
+
+2. **Create a Virtual Environment**  
    It natively isolates the project's dependencies from your global Python environment.
    ```bash
    cd backend
@@ -25,13 +31,13 @@ Before starting, ensure you have the following installed on your machine:
    venv\Scripts\activate          # On Windows
    ```
 
-2. **Install Dependencies**
+3. **Install Dependencies**  
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure Environment Variables**
-   Create a `.env` file in the root of the `backend/` folder (next to `manage.py`). **Never commit this file.**
+4. **Configure Environment Variables (.env)**  
+   Create a file named `.env` in the `backend/` folder. Populate it with the keys below. **Do not share your .env on GitHub.**
    ```env
    TMDB_API_KEY=your_tmdb_api_key_v3_here
    DJANGO_SECRET_KEY=super-secret-local-key
@@ -40,20 +46,20 @@ Before starting, ensure you have the following installed on your machine:
    CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
    ```
 
-4. **Run Database Migrations**
+5. **Run Database Migrations**  
+   This creates your `db.sqlite3` file and tables.
    ```bash
-   python manage.py makemigrations
    python manage.py migrate
    ```
 
-5. **Seed the Local Database (TMDB Sync)**
-   Populate your empty database with initial content.
+6. **Seed the Local Database (TMDB Sync)**  
+   *Note: Must be run in this order.*
    ```bash
    python manage.py sync_movies --genres
    python manage.py sync_movies --trending 2
    ```
 
-6. **Start the Development Server**
+7. **Start the Development Server**  
    ```bash
    python manage.py runserver
    ```
