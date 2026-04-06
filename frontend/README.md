@@ -13,23 +13,29 @@ Ensure you have the following installed before development:
 
 ---
 
-## 🚀 Local Setup & Installation
+## 🚀 Local Setup & Installation (First Attempt)
 
-1. **Install Dependencies**
-   Navigate to the frontend folder and pull down all NPM packages.
+1. **Check out your Feature Branch**  
+   Never work on `main`. Find your branch in `PROJECT_GUIDE.md`.
+   ```bash
+   git checkout <your-assigned-branch>
+   ```
+
+2. **Install Dependencies**  
+   Navigate to the frontend folder and install all NPM packages.
    ```bash
    cd frontend
    npm install
    ```
 
-2. **Configure Environment Variables**
-   Create a `.env.local` file in the root of the `frontend/` folder.
+3. **Configure Environment Variables (.env.local)**  
+   Create a file named `.env.local` in the `frontend/` folder.
    ```env
    # Ensure this points to the exact URL of your local Django server
    NEXT_PUBLIC_API_URL=http://localhost:8000/api
    ```
 
-3. **Start the Development Server**
+4. **Start the Development Server**  
    ```bash
    npm run dev
    ```
