@@ -1,0 +1,38 @@
+[33mcommit 0b34e2c1c36d502f21654f7494b9f1320bef08fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfix/frontend-types-search[m[33m, [m[1;31morigin/test/frontend-ui[m[33m, [m[1;31morigin/test/backend-api[m[33m, [m[1;31morigin/fix/frontend-types-search[m[33m, [m[1;31morigin/feat/innovation-ui[m[33m, [m[1;31morigin/feat/innovation-backend[m[33m, [m[1;31morigin/feat/backend-core-fixes[m[33m, [m[1;31morigin/docs/testing-report[m[33m, [m[1;31morigin/docs/contributions-workflow[m[33m)[m
+Author: Okidi Norbert <145354274+OkidNorbert@users.noreply.github.com>
+Date:   Mon Apr 6 13:48:39 2026 +0300
+
+    docs: add project documentation for backend and frontend repositories
+
+[33mcommit 086cf557785a503b8b21a6c29a082c91123937e2[m
+Author: Okidi Norbert <145354274+OkidNorbert@users.noreply.github.com>
+Date:   Mon Apr 6 13:39:55 2026 +0300
+
+    docs: add project guide and execution roadmap for CineQuest software construction project
+
+[33mcommit 6f3e3d54ed95e0e8392139d06379827fb24b60c3[m
+Author: Okidi Norbert <145354274+OkidNorbert@users.noreply.github.com>
+Date:   Mon Apr 6 13:35:42 2026 +0300
+
+    docs: update README with installation formatting and project work distribution table
+
+[33mcommit 84417d539d32459a23f8b56fad730af4ca0b221f[m
+Merge: 73ad244 0538998
+Author: Muganga Charles <104686307+muganga-charles@users.noreply.github.com>
+Date:   Sun Apr 5 14:49:57 2026 +0300
+
+    Merge pull request #1 from Software-Construction-Easter-2026/codebase
+    
+    uploading the student version codebase
+
+[33mcommit 0538998e01d9b7c7853feab40e13f29e672fa377[m
+Author: muganga-charles <mugangacharles5@gmail.com>
+Date:   Sun Apr 5 14:46:45 2026 +0300
+
+    uploading the student version codebase
+
+[33mcommit 73ad2446c34352416420e71805a2504cf002973b[m
+Author: muganga-charles <mugangacharles5@gmail.com>
+Date:   Sun Apr 5 14:45:33 2026 +0300
+
+    first commit
